@@ -130,7 +130,7 @@
     * 启动函数  .exe()
  * */
 (function(){
-    //面向对象写法
+    //面向对象
     function Banr( $ul , $pic , $tab ) {
         this.$ul = $ul;
         this.$tab = $tab;
