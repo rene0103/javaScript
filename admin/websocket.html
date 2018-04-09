@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button class="submit">点击提交订单</button>
+<h1></h1>
+</body>
+</html>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket=io.connect();
+    socket.on('myevent',function(data){
+        console.log(data);
+    })
+    socket.on('la',function(data){
+        console.log(data);
+    })
+    document.querySelector('.submit').onclick=function(){
+        socket.emit('haha','test一下')
+    }
+
+    socket.on('test',function(data){
+        document.querySelector('h1').innerHTML=data;
+    })
+    socket.on('zdc',function(data){
+        console.log(data);
+        document.querySelector('h1').innerHTML=data;
+    })
+</script>

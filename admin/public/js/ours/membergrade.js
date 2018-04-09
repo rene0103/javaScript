@@ -1,0 +1,52 @@
+var vm=new Vue({
+    el:'#feedback_form',
+    data:{
+    },
+    methods:{
+        priceisNull:function(e){
+            if(e.target.value==''){
+                e.target.placeholder='消费标准不能为空';
+            };
+        },
+        discountisNull:function(e){
+            if(e.target.value==''){
+                e.target.placeholder='折扣不能为空';
+            };
+        },
+        submit:function(e){
+            if($('#discount').val()!=''&&$('#price').val()!=''){
+                $.ajax({
+                    type:'POST',
+                    url:'/memberupdate',
+                    data:$('#feedback_form').serialize(),
+                    success:function(data){
+                        if(data==true){
+                            alert('修改成功')
+                        }
+                    }
+                })
+            }
+            else{
+                return;
+            }
+        },
+        refresh:function(){
+            $.ajax({
+                type:'get',
+                url:'/memberrefresh',
+                success:function(data){
+                    if(data==true){
+                        alert('会员已更新')
+                    }
+                }
+            })
+        }
+    }
+})
+$('#grade-select').change(function(event){
+    var mgid=$(this).val();
+    $.post('/member',{mgid:mgid},function(data){
+            $('#price').val(data.mgprice);
+            $('#discount').val(data.mgdiscount);
+    })
+})

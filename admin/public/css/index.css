@@ -1,0 +1,219 @@
+.Body{
+    position: relative;
+    width:960px;
+    margin:12px auto 0;
+}
+/*轮播开始*/
+.banner{
+    position: relative;
+    width:100%;
+    height:370px;
+}
+.banner .pic ul li{
+    display: none;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.banner .pic ul li img{
+    width: 960px;
+    height:370px;
+}
+.banner .btn button{
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+    width:30px;
+    height: 50px;
+    opacity: .5;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+}
+.banner .btn button:hover{
+    opacity:1;
+    cursor: pointer;
+}
+.banner .btn .left{
+    top:calc(50% - 25px);
+    left:0;
+}
+.banner .btn .right{
+    top:calc(50% - 25px);
+    right:0;
+}
+.banner .tab{
+    position: absolute;
+    bottom:10px;
+    left:400px;
+    width:140px;
+    height:20px;
+}
+.banner .tab ul{
+    width:100%;
+    height:100%;
+}
+.banner .tab ul li{
+    float: left;
+    width:20px;
+    height:20px;
+    border:1px solid #ddd;
+    margin-left: 10px;
+    line-height:20px;
+    text-align: center;
+    color: #dddddd;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+}
+.banner .tab ul li.on{
+    background: #f60;
+}
+/*特选*/
+.select{
+    position: absolute;
+    top:290px;
+    left:calc(50% - 430px);
+    width:860px;
+    height:312px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.select .top ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.select .top ul li{
+    width:19%;
+    height:200px;
+    padding-top: 30px;
+    text-align: center;
+}
+.select .top ul li a{
+    display: inline-block;
+    width:100%;
+    height:100%;
+}
+.select .top ul li a span{
+    display: block;
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+}
+.select .top ul li.top-last-li a{
+    margin-top: 50px;
+}
+.select .top ul li.top-last-li a span{
+    padding-top: 45px;
+}
+.select .bottom{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width:100%;
+    height:82px;
+}
+.select .bottom span{
+    display: inline-block;
+    width:49.7%;
+    height:100%;
+    background: #f60;
+    margin:0 auto;
+    line-height: 82px;
+    text-align: center;
+}
+.select .bottom span.left{
+    background: #66d08c;
+    color: #fff;
+}
+.select .bottom span.right{
+    background: #f3fcf6;
+    color: #84b87b;
+}
+/*加入我们*/
+.join{
+    width:100%;
+    height:540px;
+}
+.join .top{
+    width:100%;
+    height:232px;
+    background-color: #f3ece4;
+}
+.join .mid{
+    width:100%;
+    height:100px;
+}
+.join .mid img{
+    width:100%;
+    height:100px;
+}
+.join .bottom,.join .bottom img{
+    width:100%;
+    height:208px;
+}
+
+
+/*downLoad*/
+.down{
+    width:100%;
+    height: 229px;
+    padding-top: 20px;
+    background: url(../images/down.png) no-repeat center;
+}
+.down .left{
+    float: left;
+    width:300px;
+    height:80%;
+    margin-left: 114px;
+}
+.down .left .top{
+    width:100%;
+    height:50px;
+    /*margin-top: 10px;*/
+    background: url("../images/line.png") no-repeat top left;
+    color: #c40000;
+    line-height:50px;
+    font-size: 24px;
+
+}
+.down .left .bottom ul li{
+    margin:6px 0;
+    font-weight:700;
+    font-size: 14px;
+
+}
+.down .left .bottom ul li img{
+    vertical-align: middle;
+}
+.down .left .bottom ul li span{
+    margin-left: 14px;
+}
+.down .right{
+    display: flex;
+    justify-content: space-around;
+    float: left;
+    width:300px;
+    height:62%;
+    margin-top: 50px;
+}
+.down .right span{
+    display: block;
+    width:100%;
+    height:30px;
+    border:1px solid #fb5554;
+    margin-top:10px;
+    text-align: center;
+    color: #fb5554;
+    font-size: 14px;
+    line-height: 30px;
+    border-radius: 20px;
+    box-shadow: 4px 0 4px #ddd;
+    transition: 1s;
+}
+.down .right span:hover{
+    background: #fb5554;
+    color: #fff;
+    cursor: pointer;
+}
